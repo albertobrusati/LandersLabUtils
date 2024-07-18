@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: landerslabutils
-Version: 0.0.2
+Version: 0.0.3
 Summary: Landers Lab utilities for ALS compute project
 Home-page: https://github.com/albertobrusati/LandersLabUtils
 Author: alberto brusati
@@ -40,7 +40,7 @@ Library overview:
 
 
 
-Vignette available at: https://github.com/albertobrusati/LandersLabUtils/LandersLabUtilities.pdf
+A comprehensive documentation is available at: https://albertobrusati.github.io/LandersLabUtils/
  
  
 

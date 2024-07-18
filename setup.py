@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
   name = 'landerslabutils',
   packages = ['landerslabutils'],
-  version = '0.0.2',
+  version = '0.0.3',
   license='MIT',
   description = 'Landers Lab utilities for ALS compute project',
   long_description="""LandersLabUtils functions \n
@@ -18,7 +18,7 @@ Library overview: \n
 * extract_regions(): Filters a Hail MatrixTable based on genomic regions. \n
 
 \n
-Vignette available at: https://github.com/albertobrusati/LandersLabUtils/LandersLabUtilities.pdf
+A comprehensive documentation is available at: https://albertobrusati.github.io/LandersLabUtils/
  
  \n
 
