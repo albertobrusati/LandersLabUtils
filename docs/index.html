@@ -51,12 +51,28 @@
             border-radius: 5px;
             font-family: monospace;
         }
+                table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
     </style>
 </head>
 <body>
     <nav>
         <h2>Contents</h2>
         <a href="#introduction">Introduction</a>
+        <a href="#requirements">Requirements</a>
         <a href="#installation">Installation</a>
         <a href="#functions">Functions</a>
         <ul>
@@ -74,7 +90,55 @@
         
         <h2 id="introduction">Introduction</h2>
         <p>This documentation provides details about the functions defined in the provided python package (<code>landerslabutilities</code>). These functions, available as a python package on PYPI, were built to lighten the burden of filtering data from the ALS Compute project. In particular, we included gene table extraction, single sample analysis, joint VCF creation, and region extraction. Examples for each function are provided below.</p>
-        
+
+        <h2 id="requirements">Requirements</h2>
+        <p>LandersLabUtilities runs on hail clusters or single node. In case you are using our package fro ALS compute project, consider the subsequent configuration:</p>
+        <table>
+            <tr>
+                <th>App</th>
+                <th>Features</th>
+            </tr>
+            <tr>
+                <td>Profile CPU</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Profile GB</td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td>Compute type</td>
+                <td>Cluster</td>
+            </tr>
+            <tr>
+                <td>Workers</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Workers CPU</td>
+                <td>16</td>
+            </tr>
+        </table>
+        <p>If you are filtering samples, first, is mandotory to create a file tab separated with the sampleID in the first column and the subsample in the second (please, use these names for the columns):</p>
+        <table>
+            <tr>
+                <th>sampleID</th>
+                <th>subsample</th>
+            </tr>
+            <tr>
+                <td>RES01</td>
+                <td>group</td>
+            </tr>
+            <tr>
+                <td>RES02</td>
+                <td>group</td>
+            </tr>
+            <tr>
+                <td>RES03</td>
+                <td>group</td>
+            </tr>
+        </table>
+
         <h2 id="installation">Installation</h2>
         <p><code>Landerslabutilities</code> are completely available on PYPI repository. To easily access the functionality, simply install the package via pip:</p>
         <pre class="terminal">>>> pip3 install landerslabutils</pre>
